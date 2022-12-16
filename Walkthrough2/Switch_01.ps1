@@ -1,4 +1,7 @@
+# Script to Demonstrate the Switch loop
+# Define the day Variable
 $day = 4
+# The Switch statement compares the test value,to each of the conditions
 switch ( $day )
 {
  0 { $result = 'Sunday' }
@@ -9,4 +12,5 @@ switch ( $day )
  5 { $result = 'Friday' }
  6 { $result = 'Saturday' }
 }
+# Output result
 $result
