@@ -6,12 +6,12 @@
 - PowerShell Repository
 </pre>
 ![img.png](./documentation/markdown/PS.png) ![img.png](./documentation/markdown/Git.gif) ![img.png](./documentation/markdown/GitHub.gif)![img.png](./documentation/markdown/Github2.jpg) <br/>
-# PowerShellExercises - IaC Weeks 10 & 11
+# PowerShell Exercises - IaC Weeks 10 & 11
 
 ### This repository contains all the PowerShell Exercises carried out in Weeks 10 to 11 of the Module Infrastructure as Code (IaC) for the academic year 2022/23. 
 
 ## Table of contents
-- [Aboutt](#about)
+- [About](#about)
 - [Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
 - [Testing](#testing)
@@ -27,8 +27,10 @@ and flow control in PowerShell. Again, the scripts created are presented in the 
 administration using PowerShell scripts. Finally, in walkthrough 4 we are introduced to the set of
 PowerShell features known as Desired State Configuration (DSC) used to create and maintain
 configured Windows environments.
+#### Branching
+The repository has three main branches (Main,Test and Dev). Each Feature or Bugfix change will originate on its own branch created from the Dev branch and will be merged back into Dev when completed.  The Dev branch is then merged into the Test branch for extensive testing.  Once testing has been passed the test branch is then merged into the main branch. Finally, the Feature or Bugfix branch once full merged back into main, can be deleted.
 ## Getting-Started
-All Scrits can be run on Visual Studio Code or appropriate IDE.
+All Scripts can be run on Visual Studio Code or appropriate IDE.
 
 ## Prerequisites
 - Language: Powershell 7.3 & 5.1
