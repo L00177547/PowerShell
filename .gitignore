@@ -1,0 +1,5 @@
+# Ignore IDE Files
+.idea
+# Ignore .cmd nad .bat files
+.cmd
+.bat
