@@ -1,0 +1,2 @@
+﻿Firstname,Lastname,Username,Department,Password,OU
+John,Doe,L00123479,Student,Passw0rd,"OU=Users,OU=FirstYears,DC=ads,DC=Vaughans,DC=com"

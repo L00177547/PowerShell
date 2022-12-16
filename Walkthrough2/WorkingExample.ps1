@@ -1,3 +1,4 @@
+# Script to demonstrate a simple Tax calculation.
 $amount = 200
 $VAT = 0.23
 $result = $amount * $VAT
