@@ -5,13 +5,13 @@
 - Academic Year 2022/23
 - PowerShell Repository
 </pre>
-![img.png](./documentation/PS.png) ![img.png](./documentation/Git.gif) ![img.png](./documentation/GitHub.gif)![img.png](./documentation/Github2.jpg) <br/>
-# PowerShell Exercises - IaC Weeks 10 & 11
+![img.png](./documentation/markdown/PS.png) ![img.png](./documentation/markdown/Git.gif) ![img.png](./documentation/markdown/GitHub.gif)![img.png](./documentation/markdown/Github2.jpg) <br/>
+# PowerShellExercises - IaC Weeks 10 & 11
 
 ### This repository contains all the PowerShell Exercises carried out in Weeks 10 to 11 of the Module Infrastructure as Code (IaC) for the academic year 2022/23. 
 
 ## Table of contents
-- [About](#about)
+- [Aboutt](#about)
 - [Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
 - [Testing](#testing)
