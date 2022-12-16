@@ -1,3 +1,6 @@
+# Script to demonstrate the While Loop
+# While an inputted value is not equal to Q
+# Run the switch statement
 while(($inp = Read-Host -Prompt "Select a command") -ne "Q"){
     switch($inp){
     L {"File will be deleted"}

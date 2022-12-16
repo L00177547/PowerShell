@@ -1,9 +1,9 @@
 ﻿#Enter a path to your import CSV file
-$ADUsers = Import-csv C:\Powershell\WT3\PGDipCLOD2022.csv
+$ADUsers = Import-csv C:\Powershell\Walkthrough-3\Students.csv
 
-# Typo in the domain name!!!!
-$Organisation = "DC=ads,DC=solarsubmaines,DC=com"
-$Classgroup = "PGDipCLOD2022"
+# Declare the Domainname
+$Organisation = "DC=Vaughans,DC=com"
+$Classgroup = "FirstYears"
 
 # Add OUs for User and for this specific group
 New-ADOrganizationalUnit -Name $Classgroup -Path $Organisation -ProtectedFromAccidentalDeletion $false
@@ -14,7 +14,7 @@ New-ADOrganizationalUnit -Name "Groups" -Path "OU=$Classgroup,$Organisation" -Pr
 New-ADOrganizationalUnit -Name "Servers" -Path "OU=$Classgroup,$Organisation" -ProtectedFromAccidentalDeletion $false
 
 # Create a group for these users
-New-ADGroup -Name $Classgroup -Description "PGDip Cloud 2022" -GroupCategory Security -GroupScope DomainLocal -Path "OU=Groups, OU=$Classgroup,$Organisation"
+New-ADGroup -Name $Classgroup -Description "First Years" -GroupCategory Security -GroupScope DomainLocal -Path "OU=Groups, OU=$Classgroup,$Organisation"
 
 
 foreach ($User in $ADUsers)
@@ -39,7 +39,7 @@ foreach ($User in $ADUsers)
             #Account will be created in the OU listed in the $OU variable in the CSV file     
             New-ADUser `
             -SamAccountName $Username `
-            -UserPrincipalName "$Username@ads.solarsubmaines.com" `
+            -UserPrincipalName "$Username@vaughans.com" `
             -Name "$Firstname $Lastname" `
             -GivenName $Firstname `
             -Surname $Lastname `
@@ -51,7 +51,7 @@ foreach ($User in $ADUsers)
             -AccountPassword (convertto-securestring $Password -AsPlainText -Force)
 
             # Add or change any other parameters
-            Set-ADUser -Identity $Username -Description "PGDip Student" -Organization "ATU"
+            Set-ADUser -Identity $Username -Description "FirstYear Student" -Organization "UniversityOfLife"
 
             # Add the user to a primary group
             Add-ADGroupMember -Identity $Classgroup -Members $Username
