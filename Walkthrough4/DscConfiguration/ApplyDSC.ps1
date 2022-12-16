@@ -1,4 +1,4 @@
-﻿Start-DscConfiguration -Path C:\PowerShell\WT4\DscConfiguration -Verbose -Wait -Force
+﻿Start-DscConfiguration -Path C:\PowerShell\Walkthrough-4\DscConfiguration -Verbose -Wait -Force
 
 Get-Content C:\Temp\HelloWorld.txt
 Get-DscConfiguration

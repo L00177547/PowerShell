@@ -4,15 +4,15 @@ Run one line at a time, under supervision!
 #>
 
 # Name the first DC computer
-Rename-Computer -NewName server-1
+Rename-Computer -NewName Second-Server
 # Check existing IP addresses
 Get-NetIPAddress
-# My interface index was #5, get an IP address from the lecturer, the range is 172.28.78.1-50
-New-NetIPAddress -InterfaceIndex 5 -IPAddress 172.28.78.2 -PrefixLength 22 -DefaultGateway 172.28.76.20
+# My interface index was #6, 
+New-NetIPAddress -InterfaceIndex 6 -IPAddress 192.168.105.3 -PrefixLength 24 -DefaultGateway 192.168.105.1
 # Set DC-1 as being the DNS
-Set-DnsClientServerAddress -InterfaceIndex 5 -ServerAddresses 172.28.78.1
+Set-DnsClientServerAddress -InterfaceIndex 6 -ServerAddresses 192.168.105.2
 # Join the domain, you will be asked for dc-1 username and password
-add-computer –domainname "ads.solarsubmaines.com"  -restart
+add-computer –domainname "vaughans.com"  -restart
 # Now reboot
 Restart-Computer
 # Allow for remote scripting
